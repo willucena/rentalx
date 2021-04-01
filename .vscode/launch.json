@@ -8,7 +8,7 @@
     {
       "type": "node",
       "request": "attach",
-      "name": "Launch Program",
+      "name": "Debug Node",
       "skipFiles": [
         "<node_internals>/**"
       ],

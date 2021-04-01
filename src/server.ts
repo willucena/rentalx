@@ -7,4 +7,4 @@ app.use(express.json());
 
 app.use(router);
 
-app.listen(3333, () => console.debug("Opa servidor subiu"))
+app.listen(3333, () => console.debug("Server running!"))
