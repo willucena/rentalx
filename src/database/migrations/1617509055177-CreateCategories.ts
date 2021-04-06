@@ -10,7 +10,7 @@ export class CreateCategories1617509055177 implements MigrationInterface {
                 {
                     name:"id",
                     type:"uuid",
-                    isPrimary: true
+                    isPrimary: true,
                 },
                 {
                     name:"name",
