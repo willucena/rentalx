@@ -2,7 +2,7 @@
     "env": {
         "es2021": true,
         "node": true,
-		"jest": true
+				"jest": true
     },
     "extends": [
         "airbnb-base",
@@ -21,10 +21,10 @@
         "prettier"
     ],
     "rules": {
-            "camelcase": "off",
-			"import/no-unresolved": "error",
-            "prettier/prettier": "error",
-			"@typescript-eslint/naming-convention": [
+          "camelcase": "off",
+					"import/no-unresolved": "error",
+          "prettier/prettier": "error",
+					"@typescript-eslint/naming-convention": [
 			  "error",
 			  {
 			    "selector": "interface",
