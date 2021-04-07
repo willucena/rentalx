@@ -7,7 +7,7 @@ import { router } from "./routes";
 import swaggerFile from   "./swagger.json";
 import "./database";
 import "./shared/container";
-import { errorMiddleware } from "./middlewares/errorMiddleware";
+import { resolveError } from "./middlewares/resolveError";
 
 const app = express();
 
@@ -17,6 +17,6 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile))
 
 app.use(router);
 
-app.use(errorMiddleware);
+app.use(resolveError);
 
 app.listen(3333, () => console.debug("Server running!"))

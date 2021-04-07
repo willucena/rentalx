@@ -18,11 +18,15 @@ export async function  ensureAuthenticated(request: Request, response: Response,
     const { sub : user_id } = verify(token, "17bbe754d6d696c802d05c6f121e64a0") as IPayload;
 
     const userRepository = new UsersRepository();
-    const user = await userRepository.findId(user_id);
+    const user = await userRepository.findById(user_id);
 
     if(!user){
       throw new AppError("User does not exists")
     }
+    request.user  = {
+      id: user_id
+    }
+    
     next();
   }catch{
     throw new AppError("Invalid token")
