@@ -6,9 +6,6 @@
   "username": "docker",
   "password": "docker",
   "database": "rentx",
-  "synchronize": true,
-    "logging": true,
-    "autoLoadEntities": true,
   "entities": ["./src/modules/**/entities/*.ts"],
   "migrations": ["./src/database/migrations/*.ts"],
   "cli": {
