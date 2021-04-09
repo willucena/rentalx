@@ -1,6 +1,6 @@
 import { inject, injectable } from "tsyringe";
 import { hash } from 'bcrypt';
-import { AppError } from "@errors/AppError";
+import { AppError } from "@shared/errors/AppError";
 import { IUsersRepository, ICreateUsersDTO } from "@modules/accounts/repositories/IUsersRepository";
 
 @injectable()

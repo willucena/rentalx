@@ -1,5 +1,5 @@
 import  { Request, Response, NextFunction } from 'express';
-import { AppError } from '../errors/AppError';
+import { AppError } from '../shared/errors/AppError';
 
 export function  resolveError(err: Error, request: Request, response: Response, next: NextFunction) {
   //Tratando errors que ocorream na aplicação
