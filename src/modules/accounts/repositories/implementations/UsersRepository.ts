@@ -1,7 +1,8 @@
 import { injectable } from "tsyringe";
 import { getRepository, Repository } from "typeorm";
-import User from "../../entities/User";
-import { ICreateUsersDTO, IUsersRepository } from "../IUsersRepository";
+import User from "@modules/accounts/entities/User";
+import { IUsersRepository , ICreateUsersDTO} from "../IUsersRepository";
+
 
 @injectable()
 class UsersRepository implements IUsersRepository {
@@ -29,7 +30,7 @@ class UsersRepository implements IUsersRepository {
     return user;
   }
 
-  async findById(id: string): Promise<User> {
+  async findById(id: string): Promise<User | undefined> {
     const user = await this.repository.findOne(id);
     return user;
   }

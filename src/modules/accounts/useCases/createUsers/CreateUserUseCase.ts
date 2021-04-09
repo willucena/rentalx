@@ -1,7 +1,7 @@
 import { inject, injectable } from "tsyringe";
 import { hash } from 'bcrypt';
-import { ICreateUsersDTO, IUsersRepository } from "../../repositories/IUsersRepository";
-import { AppError } from "../../../../shared/errors/AppError";
+import { AppError } from "@errors/AppError";
+import { IUsersRepository, ICreateUsersDTO } from "@modules/accounts/repositories/IUsersRepository";
 
 @injectable()
 class CreateUserUseCase {
